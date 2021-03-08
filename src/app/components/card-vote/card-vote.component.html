@@ -1,0 +1,50 @@
+<div *ngIf="cardsVote" class="container-card" [ngStyle]="getBackground(cardsVote.image)">
+  <div class="vote-info">
+    <div>
+    </div>
+    <div>
+      <div class="vote-info-grid">
+        <div class="center">
+          <span><img src="../../../assets/images/thumbs_1.png" alt="thumbs_up"></span>
+        </div>
+        <div class="has-text-left">
+          <h1>{{ cardsVote.name }} </h1>
+        </div>
+      </div>
+      <div class="vote-info-grid">
+        <div>
+        </div>
+        <div>
+          <p>{{ cardsVote.description }} </p>
+        </div>
+      </div>
+      <div class="vote-info-grid">
+        <div>
+        </div>
+        <div class="footer-vote-info">
+
+          <button *ngIf="!cardsVote.votestate" class="thumb up vote-icon" (click)="thumbUp(cardsVote)" >
+              <img src="../../../assets/images/thumbs_1.png" alt="thumbs_up">  
+          </button>
+          <button  *ngIf="!cardsVote.votestate" class="thumb down vote-icon" (click)="thumbDown(cardsVote)" >
+             <img src="../../../assets/images/thumbs_2.png" alt="thumbs_down"> 
+          </button>
+          <button *ngIf="cardsVote.votestate" class="button-view" (click)="voteAgain(cardsVote)">{{ "VOTING_AGAIN" | translate }}</button>
+          <button *ngIf="!cardsVote.votestate" class="button-view" (click)="takeVote(cardsVote)">{{ "VOTE_NOW" | translate }}</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div [ngStyle]="setWidthPercent(cardsVote)" class="footer-vote">
+    <div class="thumb up">
+      <button> <img src="../../../assets/images/thumbs_1.png" alt="thumbs_up"> </button>
+      <h2 class="center-flex"> {{parsePercent(cardsVote.percentup)}} %</h2>
+
+    </div>
+    <div class="thumb down">
+      <button> <img src="../../../assets/images/thumbs_2.png" alt="thumbs_down"> </button>
+      <h2 class="center-flex"> {{parsePercent(cardsVote.percentdown)}} % </h2>
+    </div>
+  </div>
+</div>

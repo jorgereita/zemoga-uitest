@@ -1,0 +1,23 @@
+
+
+ span, p, ul, li, a, i, strong {
+  //  font-size: 1vw;   
+   font-family: 'Lato';
+
+  &.normal-size {
+    //  font-size: 1vw!important;
+   }
+ }
+
+.title-nav{
+  font-size: 2vw;
+}
+.big-title{
+  font-size: 71pt;
+  margin: 0;
+}
+.text-article{
+  font-size: 25px;
+}
+
+

@@ -1,0 +1,130 @@
+<body>
+  <nav>
+    <div>
+      <button class="menu-ham-button"> <img src="../../../assets/images/menu.png" alt="menu"> </button>
+    </div>
+    <div class="has-text-left">
+      <p class="title-nav"> {{ "NAV_NAME" | translate }} </p>
+    </div>
+    <div class="links-group">
+      <a (click)="goOther()">{{ "NAV_LINK1" | translate }}</a>
+      <a (click)="goOther()">{{ "NAV_LINK2" | translate }}</a>
+      <a (click)="goOther()">{{ "NAV_LINK3" | translate }}</a>
+      <a class="has-text-left" aria-label="Search"><img src="../../../assets/images/search.png" alt="search"></a>
+    </div>
+    <div>
+
+    </div>
+  </nav>
+  <header>
+
+    <div></div>
+    <div class="grid-info-square">
+      <div></div>
+      <div class="square-info">
+        <div class="text-square-info">
+          <article>
+            <p class="has-margin-0"> {{ "SQUARE_INFO_TITLE_S" | translate }} </p>
+            <p class="big-title" aria-label="big title">{{ "SQUARE_INFO_TITLE" | translate }} </p>
+            <p class="text-article"> {{ "SQUARE_INFO_DESC" | translate }} </p><br>
+            <div class="is-flex">
+              <img src="../../../assets/images/Wiki.png" alt="thumbs_up">
+              <u class="has-padding-left-2">{{ "SQUARE_INFO_MORE" | translate }}</u>
+            </div>
+            <br>
+            <p class="text-article"><strong> {{ "SQUARE_INFO_VEREDICT" | translate }} </strong> </p>
+          </article>
+        </div>
+        <div class="footer-square-info">
+          <div class="thumb up">
+            <button> <img src="../../../assets/images/thumbs_1.png" alt="thumbs_up"> </button>
+          </div>
+          <div class="thumb down">
+            <button> <img src="../../../assets/images/thumbs_2.png" alt="thumbs_down"> </button>
+          </div>
+        </div>
+      </div>
+      <div></div>
+    </div>
+    <div></div>
+    <div></div>
+
+    <div class="footer-closing"></div>
+    <div>
+      <div class="closing-comment">
+        <div class="block-1 footer-closing">
+            <p>{{ "CLOSING_COMMNET" | translate }} </p>
+        </div>  
+        <div class="block-2 footer-closing-desc">
+            <p> <strong>{{ "CLOSING_DAYS" | translate }} </strong>  </p>
+            <p>{{ "DESC_COMMNET" | translate }} </p>
+          </div>
+      </div>
+    </div>
+    <div class="footer-closing-desc"></div>
+    <div class="footer-closing-desc"></div>
+  </header>
+  <main>
+    <div class="info-banner">
+        <div></div>
+        <div class="article-info-banner">
+            <div>
+                <p  class="has-margin-bottom-0">{{ "INFO_BANNER_SUB_HEAD" | translate }}</p>
+                <h1 class="has-margin-top-0"><strong>{{ "INFO_BANNER_HEAD" | translate }}</strong></h1>
+            </div>
+            <div>
+                {{ "INFO_BANNER_ARTICLE" | translate }}
+            </div>
+            <div>
+                <button class="tp-button"> <img src="../../../assets/images/close.png" alt="thumbs_down"> </button>
+            </div>
+        </div>
+
+    </div>
+    <div class="votes-container">
+        <div></div>
+        <div>
+            <p class="title-nav">{{ "RULINGS" | translate }}</p>
+            
+            <div class="cards-container">
+             <div *ngFor="let item of cardsVoteArray">
+                <app-card-vote [cardsVote]=item ></app-card-vote>
+             </div>
+            </div>
+        </div>
+        <div></div>
+    </div>
+  </main>
+  <footer>
+    <div class="grid-footer">
+        <div></div>
+        <div class="new-name">
+            <div class="item">
+                <h2> {{ "FOOTER_COPY" | translate }} </h2>
+            </div>
+            <div class="divider"></div>
+            <div class="item">
+                <button>{{ "FOOTER_BUTTON" | translate }}</button> 
+            </div>
+        </div>
+        <div></div>
+    </div>
+    <div class="grid-footer">
+        <div></div>
+        <div class="final-footer">
+            <div class="item">
+                <label> {{ "FOOTER_TERMS_LABEL" | translate }} </label>
+                <label> {{ "FOOTER_PRIVACY_LABEL" | translate }} </label>
+                <label> {{ "FOOTER_CONTACT_LABEL" | translate }} </label>
+            </div>
+            <div class="divider"></div>
+            <div class="item">
+                <label> {{ "FOOTER_CONTACT_FOLLOW" | translate }} </label>
+                <span><img src="../../../assets/images/face.png" alt="thumbs_down"></span>
+                <span><img src="../../../assets/images/tw.png" alt="thumbs_down"></span>
+            </div>
+        </div>
+        <div></div>
+    </div>
+  </footer>
+</body>
