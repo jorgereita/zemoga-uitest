@@ -32,10 +32,15 @@ describe('CardVoteComponent', () => {
     component.thumbUp(component.cardsVote);
     expect(component.cardsVote.prevotestate).toEqual(1);
   });
-  it('validate Thumb down', () => {
+  it('validate Thumb Down', () => {
     component.cardsVote = createElement()[0];
-    component.thumbUp(component.cardsVote);
-    expect(component.cardsVote.prevotestate).toEqual(2);
+    component.thumbDown(component.cardsVote);
+    expect(component.cardsVote.prevotestate).toEqual(1);
+  });
+  it('validate Thumb Down', () => {
+    component.cardsVote = createElement()[0];
+    component.thumbDown(component.cardsVote);
+    expect(component.cardsVote.prevotestate).toEqual(1);
   });
   // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
   function createElement(): any {
