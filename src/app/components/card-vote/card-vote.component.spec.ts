@@ -32,7 +32,12 @@ describe('CardVoteComponent', () => {
     component.thumbUp(component.cardsVote);
     expect(component.cardsVote.prevotestate).toEqual(1);
   });
-  it('validate Thumb up', () => {
+  it('validate Thumb Down', () => {
+    component.cardsVote = createElement()[0];
+    component.thumbDown(component.cardsVote);
+    expect(component.cardsVote.prevotestate).toEqual(1);
+  });
+  it('validate Thumb Down', () => {
     component.cardsVote = createElement()[0];
     component.thumbDown(component.cardsVote);
     expect(component.cardsVote.prevotestate).toEqual(1);
